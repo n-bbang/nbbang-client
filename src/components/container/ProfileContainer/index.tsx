@@ -1,13 +1,12 @@
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
+import Profile from '../../screen/Profile';
 
 interface ProfileContainerProps {}
 
 const ProfileContainer = (props: ProfileContainerProps) => {
   return (
-    <View style={styles.container}>
-      <Text>ProfileContainer</Text>
-    </View>
+    <Profile />
   );
 };
 
