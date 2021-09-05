@@ -2,6 +2,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import * as React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import Temp from '../screen/Temp';
+import LoginStackNavigator from './LoginStackNavigator';
 import MainStackNavigator from './MainStackNavigator';
 
 interface RootStackNavigatorProps {}
@@ -21,6 +22,13 @@ const RootStackNavigator = (props: RootStackNavigatorProps) => {
       <Stack.Screen
         name="MainStackNavigator"
         component={MainStackNavigator}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="LoginStackNavigator"
+        component={LoginStackNavigator}
         options={{
           headerShown: false,
         }}

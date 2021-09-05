@@ -14,7 +14,7 @@ const Temp = ({navigation}: TempProps) => {
         title="홈으로 가기"
       />
       <Button 
-        onPress={()=>navigation.navigate('LoginContainer')}
+        onPress={()=>navigation.navigate('LoginStackNavigator')}
         title='로그인 페이지로 가기'
       />
     </SafeAreaView>
