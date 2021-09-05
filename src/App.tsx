@@ -22,8 +22,6 @@ import {
 } from 'react-native';
 import RootStackNavigator from './components/navigation/RootStackNavigator';
 
-const Stack = createNativeStackNavigator();
-
 const App = () => {
   return (
     <NavigationContainer>
