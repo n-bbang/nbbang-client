@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> snapshot test 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomColor": "gray",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "height": 60,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 16,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 24,
+          "justifyContent": "center",
+          "width": 24,
+        }
+      }
+    />
+    <Text>
+      Pie
+    </Text>
+    <View
+      accessible={true}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 24,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 24,
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "black",
+              "fontSize": 24,
+            },
+            undefined,
+            Object {
+              "fontFamily": "Feather",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+  <Text>
+    Home
+  </Text>
+</View>
+`;
