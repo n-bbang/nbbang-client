@@ -8,11 +8,15 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import HomeContainer from '../container/HomeContainer';
 import ProfileContainer from '../container/ProfileContainer';
 
-interface MainDrawerNavigatorProps {}
+interface MainDrawerNavigatorProps {
+    navigation:any;
+}
 
 const Drawer = createDrawerNavigator();
 
-const MainDrawerNavigator = (props: MainDrawerNavigatorProps) => {
+const MainDrawerNavigator = ({
+    navigation,
+}: MainDrawerNavigatorProps) => {
   return (
     <Drawer.Navigator
       initialRouteName="HomeContainer"
@@ -29,10 +33,14 @@ const MainDrawerNavigator = (props: MainDrawerNavigatorProps) => {
       drawerContent={() => {
         return (
           <DrawerContentScrollView >
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{
+                navigation.navigate('HomeContainer')
+            }}>
               <Text>Home</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{
+                navigation.navigate('ProfileContainer')
+            }}>
               <Text>Profile</Text>
             </TouchableOpacity>
           </DrawerContentScrollView>
