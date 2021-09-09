@@ -9,16 +9,19 @@ interface HeaderProps {
 
 const Header = ({navigation}: HeaderProps) => {
   console.log('navigation in Header, ', navigation);
+
+  const onPress_Menu=() => {
+    navigation.dispatch(DrawerActions.openDrawer());
+    // navigation.goBack();
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.button} />
       <Text>Pie</Text>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => {
-          navigation.dispatch(DrawerActions.openDrawer());
-          // navigation.goBack();
-        }}>
+        onPress={onPress_Menu}>
         <Icon name="menu" size={24} color="black" />
       </TouchableOpacity>
     </View>

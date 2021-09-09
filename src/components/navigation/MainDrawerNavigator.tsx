@@ -9,38 +9,40 @@ import HomeContainer from '../container/HomeContainer';
 import ProfileContainer from '../container/ProfileContainer';
 
 interface MainDrawerNavigatorProps {
-    navigation:any;
+  navigation: any;
 }
 
 const Drawer = createDrawerNavigator();
 
-const MainDrawerNavigator = ({
-    navigation,
-}: MainDrawerNavigatorProps) => {
+const MainDrawerNavigator = ({navigation}: MainDrawerNavigatorProps) => {
+  const goToHome = () => {
+    navigation.navigate('HomeContainer');
+  };
+
+  const goToProfile = () => {
+    navigation.navigate('ProfileContainer');
+  };
+
   return (
     <Drawer.Navigator
       initialRouteName="HomeContainer"
-    //   screenOptions={{
-    //     drawerStyle: {
-    //       backgroundColor: 'red',
-    //       width: 500,
-    //       height:200,
-    //     },
-    //     drawerPosition:'right',
-    //     drawerType:'front',
+      //   screenOptions={{
+      //     drawerStyle: {
+      //       backgroundColor: 'red',
+      //       width: 500,
+      //       height:200,
+      //     },
+      //     drawerPosition:'right',
+      //     drawerType:'front',
 
-    //   }}
+      //   }}
       drawerContent={() => {
         return (
-          <DrawerContentScrollView >
-            <TouchableOpacity onPress={()=>{
-                navigation.navigate('HomeContainer')
-            }}>
+          <DrawerContentScrollView>
+            <TouchableOpacity onPress={goToHome}>
               <Text>Home</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={()=>{
-                navigation.navigate('ProfileContainer')
-            }}>
+            <TouchableOpacity onPress={goToProfile}>
               <Text>Profile</Text>
             </TouchableOpacity>
           </DrawerContentScrollView>
