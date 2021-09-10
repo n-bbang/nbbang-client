@@ -1,15 +1,27 @@
+import {DrawerActions} from '@react-navigation/routers';
 import * as React from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
-interface HeaderProps {}
+interface HeaderProps {
+  navigation: any;
+}
 
-const Header = (props: HeaderProps) => {
+const Header = ({navigation}: HeaderProps) => {
+  console.log('navigation in Header, ', navigation);
+
+  const onPress_Menu=() => {
+    navigation.dispatch(DrawerActions.openDrawer());
+    // navigation.goBack();
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.button} />
       <Text>Pie</Text>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={onPress_Menu}>
         <Icon name="menu" size={24} color="black" />
       </TouchableOpacity>
     </View>

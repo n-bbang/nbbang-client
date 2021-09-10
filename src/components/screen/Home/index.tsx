@@ -2,12 +2,16 @@ import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import Header from './Header';
 
-interface HomeProps {}
+interface HomeProps {
+  navigation:any;
+}
 
-const Home = (props: HomeProps) => {
+const Home = ({
+  navigation,
+}: HomeProps) => {
   return (
     <View style={styles.container}>
-      <Header />
+      <Header navigation={navigation} />
       <Text>Home</Text>
     </View>
   );
