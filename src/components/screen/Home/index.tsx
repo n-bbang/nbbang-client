@@ -8,6 +8,7 @@ interface HomeProps {
 const Home = ({
   navigation,
 }: HomeProps) => {
+
   return (
     <View style={styles.container}>
       <Text>Home</Text>
