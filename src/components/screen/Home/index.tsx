@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import Header from '../../shared/components/Header';
 
 interface HomeProps {
   navigation:any;
