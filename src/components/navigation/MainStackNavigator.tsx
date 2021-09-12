@@ -29,9 +29,7 @@ const MainStackNavigator = (props: MainStackNavigatorProps) => {
       <Stack.Screen
         name="MainDrawerNavigator"
         component={MainDrawerNavigator}
-        options={{
-          headerShown: false,
-        }}
+        
       />
     </Stack.Navigator>
   );

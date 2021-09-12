@@ -51,16 +51,12 @@ const MainDrawerNavigator = ({navigation}: MainDrawerNavigatorProps) => {
       <Drawer.Screen
         name="HomeContainer"
         component={HomeContainer}
-        options={{
-          headerShown: false,
-        }}
+        
       />
       <Drawer.Screen
         name="ProfileContainer"
         component={ProfileContainer}
-        options={{
-          headerShown: false,
-        }}
+       
       />
     </Drawer.Navigator>
   );
