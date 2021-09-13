@@ -9,7 +9,6 @@ interface LoginProps {
 const Login = ( {navigation} : LoginProps) => {
   return (
     <View style={styles.container}>
-      <Text>Login</Text>
       <LoginInput navigation={navigation}/>
     </View>
   );

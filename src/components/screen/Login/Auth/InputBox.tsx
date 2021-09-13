@@ -1,24 +1,39 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity, SafeAreaView, TextInput } from 'react-native'
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { TextInput } from 'react-native-gesture-handler';
 
-const InputBox = () => {
-	return (
-		<TextInput
-			style={styles.container}
-			defaultValue={"아이디"}
-		/>
-	);
+interface InputProps {
+	tag: string;
+	text: string;
+	value: string;
+	setValue: Function;
 }
+
+const InputBox = ({ tag, text, value, setValue }: InputProps) => {
+	return (
+		<View style={styles.container}>
+			<Text>{tag}</Text>
+			<TextInput
+				style={[styles.input,{color: !value ? "#949494" : "#000000"}]}
+				value={value}
+				placeholder={text}
+				onChangeText={(text) => setValue(text.replace(' ', ''))}
+			/>
+		</View>
+	);
+
+};
+
+export default InputBox;
 
 const styles = StyleSheet.create({
 	container: {
-		width: "100%",
+		paddingVertical: 20,
+	},
+	input: {
 		borderBottomWidth: 1,
-		borderColor: "#949494",
-		height: 54
+		borderBottomColor: "#949494",
+		height: 50,
 	},
 
 });
-
-
-export default InputBox;
