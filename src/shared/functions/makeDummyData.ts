@@ -8,7 +8,7 @@ interface CategoryInterface {
 export const getDummyCategories = (iter: number) => {
   const categoryFactory = Factory.Sync.makeFactory<CategoryInterface>({
     categoryId: Factory.each(i => i),
-    categoryName: '카테고리 이름',
+    categoryName: '이름',
   });
   return categoryFactory.buildList(iter);
 };
