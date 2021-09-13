@@ -5,17 +5,25 @@ import {CategoryInterface} from '../../../../types';
 
 interface CategoriesProps {
   categories: CategoryInterface[];
+  currentCategoryId: number;
+  setCurrentCategoryId: (param: number) => void;
 }
 
-const Categories = ({categories}: CategoriesProps) => {
-
-const renderItem=({item}:{item:CategoryInterface}) => {
+const Categories = ({
+  categories,
+  currentCategoryId,
+  setCurrentCategoryId,
+}: CategoriesProps) => {
+  const renderItem = ({item}: {item: CategoryInterface}) => {
     return (
-      <TouchableOpacity>
-        <Text>{item.categoryName}</Text>
+      <TouchableOpacity onPress={() => setCurrentCategoryId(item.categoryId)}>
+        <Text
+          style={[{paddingVertical:8,}, item.categoryId === currentCategoryId && styles.highlightText]}>
+          {item.categoryName}
+        </Text>
       </TouchableOpacity>
     );
-  }
+  };
 
   return (
     <FlatList
@@ -42,4 +50,5 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
   },
+  highlightText: {borderBottomColor: 'gray', borderBottomWidth: 1, fontWeight:'bold'},
 });
