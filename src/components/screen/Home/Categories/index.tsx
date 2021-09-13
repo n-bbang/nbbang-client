@@ -2,6 +2,7 @@ import * as React from 'react';
 import {Text, View, StyleSheet, FlatList} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {CategoryInterface} from '../../../../types';
+import CategoryItem from './CategoryItem';
 
 interface CategoriesProps {
   categories: CategoryInterface[];
@@ -16,12 +17,11 @@ const Categories = ({
 }: CategoriesProps) => {
   const renderItem = ({item}: {item: CategoryInterface}) => {
     return (
-      <TouchableOpacity onPress={() => setCurrentCategoryId(item.categoryId)}>
-        <Text
-          style={[{paddingVertical:8,}, item.categoryId === currentCategoryId && styles.highlightText]}>
-          {item.categoryName}
-        </Text>
-      </TouchableOpacity>
+      <CategoryItem 
+        currentCategoryId={currentCategoryId}
+        setCurrentCategoryId={setCurrentCategoryId}
+        categoryItem={item}
+      />
     );
   };
 
@@ -50,5 +50,4 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
   },
-  highlightText: {borderBottomColor: 'gray', borderBottomWidth: 1, fontWeight:'bold'},
 });
