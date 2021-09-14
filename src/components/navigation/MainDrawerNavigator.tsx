@@ -26,16 +26,16 @@ const MainDrawerNavigator = ({navigation}: MainDrawerNavigatorProps) => {
   return (
     <Drawer.Navigator
       initialRouteName="HomeContainer"
-      //   screenOptions={{
-      //     drawerStyle: {
-      //       backgroundColor: 'red',
-      //       width: 500,
-      //       height:200,
-      //     },
-      //     drawerPosition:'right',
-      //     drawerType:'front',
+        // screenOptions={{
+        //   // drawerStyle: {
+        //   //   backgroundColor: 'red',
+        //   //   width: 500,
+        //   //   height:200,
+        //   // },
+        //   drawerPosition:'right',
+        //   // drawerType:'front',
 
-      //   }}
+        // }}
       drawerContent={() => {
         return (
           <DrawerContentScrollView>
