@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import Header from './Header';
+import Header from '../../shared/components/Header';
 
 interface HomeProps {
   navigation:any;
@@ -11,7 +11,6 @@ const Home = ({
 }: HomeProps) => {
   return (
     <View style={styles.container}>
-      <Header navigation={navigation} />
       <Text>Home</Text>
     </View>
   );

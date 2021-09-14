@@ -10,7 +10,7 @@ const Temp = ({navigation}: TempProps) => {
   return (
     <SafeAreaView style={styles.container}>
       <Button
-        onPress={() => navigation.navigate('MainStackNavigator')}
+        onPress={() => navigation.navigate('MainDrawerNavigation')}
         title="홈으로 가기"
       />
       <Button 
