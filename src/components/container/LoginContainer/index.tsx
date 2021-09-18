@@ -2,11 +2,13 @@ import * as React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import Login from '../../screen/Login';
 
-interface LoginContainerProps {}
+interface LoginContainerProps {
+  navigation : any;
+}
 
-const LoginContainer = (props: LoginContainerProps) => {
+const LoginContainer = ({navigation}: LoginContainerProps) => {
   return (
-    <Login />
+    <Login navigation={navigation}/>
   );
 };
 

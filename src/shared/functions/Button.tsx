@@ -7,14 +7,15 @@ interface ButtonProps {
 	text: string;
 	action: Function;
 	opposite : boolean;
-
+	disabled : boolean;
 }
 
-const Button = ({ style, text, action,opposite}: ButtonProps) => {
+const Button = ({ style, text, action ,opposite,disabled }: ButtonProps) => {
 	return (
 		<TouchableOpacity
 			style={[styles.container, style,{backgroundColor: !opposite ? "#60fac1" : "#FFFFFF",}]}
-			onPress={() => action}
+			onPress={()=>action()}
+			disabled={disabled}
 		>
 			<Text style={{alignSelf:'center',color:opposite ? "#60fac1" : "#FFFFFF"}}>{text}</Text>
 		</TouchableOpacity>

@@ -2,8 +2,8 @@ import * as React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native'
 import Icon from 'react-native-vector-icons/AntDesign';
 import { DrawerActions } from '@react-navigation/routers';
-import InputBox from './Auth/InputBox';
-import Button from './Auth/Button';
+import InputBox from './InputBox';
+import Button from '../../../shared/functions/Button';
 
 interface LoginProps {
   navigation: any;
@@ -27,7 +27,7 @@ const LoginInput = ({ navigation }: LoginProps) => {
         <TouchableOpacity
           style={{ flexDirection: 'row' }}
           onPress={() => {
-            setAuto(auto)
+            setAuto(!auto)
           }}
         >
           <Icon name={auto ? "downcircle" : "downcircleo"} size={15} />
@@ -37,8 +37,8 @@ const LoginInput = ({ navigation }: LoginProps) => {
           <Text>아이디 / 비밀번호 찾기</Text>
         </TouchableOpacity>
       </View>
-      <Button style={{ marginTop: 40 }} text={"로그인"} action={() => { }} opposite={false} />
-      <Button style={{ marginTop: 20 }} text={"회원가입"} action={() => { }} opposite={true} />
+      <Button style={{ marginTop: 40 }} text={"로그인"} action={() => { }} opposite={false} disabled={false}/>
+      <Button style={{ marginTop: 20 }} text={"회원가입"} action={()=>navigation.navigate("Auth")} opposite={true} disabled={false}/>
       <Text style={styles.snslogin}>---- SNS LOGIN ----</Text>
     </SafeAreaView>
   );
