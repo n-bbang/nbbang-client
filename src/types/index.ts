@@ -9,6 +9,6 @@ export interface RoomInterface{
     roomName?:string;
     totalPrice?:number;
     personalPrice?:number
-    mexUser:number;
+    maxUser:number;
     recentPayment?:Date;
 }
