@@ -17,7 +17,7 @@ const Categories = ({
 }: CategoriesProps) => {
   const renderItem = ({item}: {item: CategoryInterface}) => {
     return (
-      <CategoryItem 
+      <CategoryItem
         currentCategoryId={currentCategoryId}
         setCurrentCategoryId={setCurrentCategoryId}
         categoryItem={item}
@@ -26,19 +26,24 @@ const Categories = ({
   };
 
   return (
-    <FlatList
-      style={styles.flatList}
-      contentContainerStyle={styles.containerStyle}
-      data={categories}
-      keyExtractor={item => String(item.categoryId)}
-      renderItem={renderItem}
-    />
+    <View style={styles.container}>
+      <FlatList
+        style={styles.flatList}
+        contentContainerStyle={styles.containerStyle}
+        data={categories}
+        keyExtractor={item => String(item.categoryId)}
+        renderItem={renderItem}
+      />
+    </View>
   );
 };
 
 export default Categories;
 
 const styles = StyleSheet.create({
+  container: {
+    height: 50,
+  },
   flatList: {
     height: 50,
     width: '100%',
