@@ -45,7 +45,7 @@ const Auth = ({ navigation }: AuthProps) => {
     }
 
     const movePage = (page : number) => {
-        if(page >= 3) navigation.navigate('MainStackNavigation');
+        if(page >= 3) navigation.navigate('MainStackNavigator');
         else setPage(page);
     }
 
