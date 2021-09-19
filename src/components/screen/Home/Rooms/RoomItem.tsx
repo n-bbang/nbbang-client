@@ -14,9 +14,14 @@ const WINDOW_WIDTH = Dimensions.get('window').width;
 // date 객체를 yy.mm.dd 포맷으로 변경
 const dateToYY_MM_DD = (date: Date | undefined) => {
   if (!date) return 'error';
-  return `${date.getFullYear().toString().slice(2, 4)}.${
-    date.getMonth() + 1
-  }.${date.getDate()}`;
+
+  let year = date.getFullYear().toString().slice(2, 4);
+  let month: number | string = date.getMonth() + 1;
+  month = month >= 10 ? month : `0${month}`;
+  let day: number | string = date.getDate();
+  day = day >= 10 ? day : `0${day}`;
+
+  return `${year}.${month}.${day}`;
 };
 
 interface RoomItemProps {
