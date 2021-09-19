@@ -15,30 +15,33 @@ const Categories = ({
   currentCategoryId,
   setCurrentCategoryId,
 }: CategoriesProps) => {
-  const renderItem = ({item}: {item: CategoryInterface}) => {
-    return (
-      <CategoryItem 
-        currentCategoryId={currentCategoryId}
-        setCurrentCategoryId={setCurrentCategoryId}
-        categoryItem={item}
-      />
-    );
-  };
 
   return (
-    <FlatList
-      style={styles.flatList}
-      contentContainerStyle={styles.containerStyle}
-      data={categories}
-      keyExtractor={item => String(item.categoryId)}
-      renderItem={renderItem}
-    />
+    <View style={styles.container}>
+      {categories.map(item => {
+        return (
+          <CategoryItem
+            currentCategoryId={currentCategoryId}
+            setCurrentCategoryId={setCurrentCategoryId}
+            categoryItem={item}
+          />
+        );
+      })}
+    </View>
   );
 };
 
 export default Categories;
 
 const styles = StyleSheet.create({
+  container: {
+    height: 50,
+    width:'100%',
+
+    flexDirection:'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
   flatList: {
     height: 50,
     width: '100%',
