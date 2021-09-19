@@ -4,6 +4,7 @@ import {Text, View, StyleSheet} from 'react-native';
 import HomeContainer from '../container/HomeContainer';
 import LoginContainer from '../container/LoginContainer';
 import ProfileContainer from '../container/ProfileContainer';
+import Auth from '../screen/Login/Auth/Auth';
 
 interface LoginStackNavigatorProps {}
 
@@ -15,6 +16,14 @@ const LoginStackNavigator = (props: LoginStackNavigatorProps) => {
       <Stack.Screen
         name="LoginContainer"
         component={LoginContainer}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Stack.Screen
+        name="Auth"
+        component={Auth}
         options={{
           headerShown: false,
         }}
