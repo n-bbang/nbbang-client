@@ -12,8 +12,8 @@ interface HomeProps {
 
 const Home = ({navigation, categories, rooms}: HomeProps) => {
 
-  console.log('categories in Home, ', categories);
-  console.log('rooms in Home, ', rooms);
+  // console.log('categories in Home, ', categories);
+  // console.log('rooms in Home, ', rooms);
 
   const [currentCategoryId, setCurrentCategoryId] = useState<number>(0);
 
@@ -24,7 +24,7 @@ const Home = ({navigation, categories, rooms}: HomeProps) => {
         currentCategoryId={currentCategoryId}
         setCurrentCategoryId={param => setCurrentCategoryId(param)}
       />
-      <Rooms />
+      <Rooms navigation={navigation} rooms={rooms} />
     </View>
   );
 };
