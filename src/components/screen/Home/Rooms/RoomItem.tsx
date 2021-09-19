@@ -8,22 +8,9 @@ import {
 } from 'react-native';
 import {RoomInterface} from '../../../../types';
 import Icon from 'react-native-vector-icons/AntDesign';
-import { numberWithComma } from '../../../../shared/functions/number';
-
+import {numberWithComma} from '../../../../shared/functions/number';
+import {dateToYYMMDD} from '../../../../shared/functions/date';
 const WINDOW_WIDTH = Dimensions.get('window').width;
-
-// date 객체를 yy.mm.dd 포맷으로 변경
-const dateToYY_MM_DD = (date: Date | undefined) => {
-  if (!date) return 'error';
-
-  let year = date.getFullYear().toString().slice(2, 4);
-  let month: number | string = date.getMonth() + 1;
-  month = month >= 10 ? month : `0${month}`;
-  let day: number | string = date.getDate();
-  day = day >= 10 ? day : `0${day}`;
-
-  return `${year}.${month}.${day}`;
-};
 interface RoomItemProps {
   navigation: any;
   roomItem: RoomInterface;
@@ -49,7 +36,7 @@ const RoomItem = ({navigation, roomItem}: RoomItemProps) => {
       </View>
       <View style={styles.datePriceContainer}>
         <Text style={styles.datePriceText}>
-          {dateToYY_MM_DD(roomItem.recentPayment)}까지
+          {dateToYYMMDD({date: roomItem.recentPayment, separator: '.'})}까지
         </Text>
         <Text style={styles.datePriceText}>
           <Text style={styles.priceHighlightText}>
