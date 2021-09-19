@@ -24,11 +24,11 @@ const dateToYY_MM_DD = (date: Date | undefined) => {
   return `${year}.${month}.${day}`;
 };
 
-const numberWithComma=(number:number|undefined)=>{
-  if(!number) return 'error';
+const numberWithComma = (number: number | undefined) => {
+  if (!number) return 'error';
   let regexp = /\B(?=(\d{3})+(?!\d))/g;
   return number.toString().replace(regexp, ',');
-}
+};
 
 interface RoomItemProps {
   navigation: any;
@@ -38,19 +38,14 @@ interface RoomItemProps {
 const RoomItem = ({navigation, roomItem}: RoomItemProps) => {
   return (
     <TouchableOpacity style={styles.container}>
-      <Text>{roomItem.roomName}</Text>
-      <Text>{roomItem.platformId}</Text>
-      <View
-        style={{
-          flexDirection: 'row',
-        }}>
+      <Text style={styles.roomName}>{roomItem.roomName}</Text>
+      <Text style={styles.platformName}>{roomItem.platformId}</Text>
+      <View style={styles.iconsContainer}>
         {Array.from({length: 3}, (value, index) => {
           return (
             <Icon
               key={index}
-              style={{
-                marginRight: 10,
-              }}
+              style={styles.icon}
               name="smile-circle"
               size={20}
               color="black"
@@ -58,13 +53,16 @@ const RoomItem = ({navigation, roomItem}: RoomItemProps) => {
           );
         })}
       </View>
-      <View
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-        }}>
-        <Text>{dateToYY_MM_DD(roomItem.recentPayment)}까지</Text>
-        <Text>{numberWithComma(roomItem.personalPrice)}원</Text>
+      <View style={styles.datePriceContainer}>
+        <Text style={styles.datePriceText}>
+          {dateToYY_MM_DD(roomItem.recentPayment)}까지
+        </Text>
+        <Text style={styles.datePriceText}>
+          <Text style={styles.priceHighlightText}>
+            {numberWithComma(roomItem.personalPrice)}
+          </Text>
+          원
+        </Text>
       </View>
     </TouchableOpacity>
   );
@@ -82,5 +80,35 @@ const styles = StyleSheet.create({
     borderWidth: 1,
 
     padding: 16,
+  },
+
+  roomName: {
+    fontSize: 16,
+    // marginBottom:4,
+  },
+  platformName: {
+    fontSize: 12,
+    marginBottom: 16,
+  },
+
+  iconsContainer: {
+    flexDirection: 'row',
+    marginBottom: 8,
+  },
+  icon: {
+    marginRight: 10,
+  },
+
+  datePriceContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  datePriceText: {
+    fontSize: 12,
+  },
+  priceHighlightText: {
+    fontSize: 14,
+    fontWeight: 'bold',
   },
 });
