@@ -18,7 +18,9 @@ interface RoomItemProps {
 
 const RoomItem = ({navigation, roomItem}: RoomItemProps) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={()=>{
+      navigation.navigate('Room');
+    }}>
       <Text style={styles.roomName}>{roomItem.roomName}</Text>
       <Text style={styles.platformName}>{roomItem.platformId}</Text>
       <View style={styles.iconsContainer}>
