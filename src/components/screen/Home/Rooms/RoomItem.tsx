@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import {RoomInterface} from '../../../../types';
 import Icon from 'react-native-vector-icons/AntDesign';
+import { numberWithComma } from '../../../../shared/functions/number';
 
 const WINDOW_WIDTH = Dimensions.get('window').width;
 
@@ -23,13 +24,6 @@ const dateToYY_MM_DD = (date: Date | undefined) => {
 
   return `${year}.${month}.${day}`;
 };
-
-const numberWithComma = (number: number | undefined) => {
-  if (!number) return 'error';
-  let regexp = /\B(?=(\d{3})+(?!\d))/g;
-  return number.toString().replace(regexp, ',');
-};
-
 interface RoomItemProps {
   navigation: any;
   roomItem: RoomInterface;
