@@ -1,7 +1,7 @@
 import {observer} from 'mobx-react';
 import React, {createContext, useContext, useEffect, useState} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
-import {getDummyCategories} from '../../../shared/functions/makeDummyData';
+import {getDummyCategories, getDummyRooms} from '../../../shared/functions/makeDummyData';
 import HomeStore from '../../../stores/HomeStore';
 import {CategoryInterface} from '../../../types';
 import Home from '../../screen/Home';
@@ -17,6 +17,7 @@ const HomeView=observer(({navigation}:{navigation:any})=>{
   useEffect(() => {
     // setCategories(getDummyCategories(5));
     homeStore.setCategories(getDummyCategories(5));
+    console.log(getDummyRooms(5));
   }, []);
   return(
     <Home navigation={navigation} categories={homeStore.categories} />
