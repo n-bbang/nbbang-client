@@ -24,6 +24,12 @@ const dateToYY_MM_DD = (date: Date | undefined) => {
   return `${year}.${month}.${day}`;
 };
 
+const numberWithComma=(number:number|undefined)=>{
+  if(!number) return 'error';
+  let regexp = /\B(?=(\d{3})+(?!\d))/g;
+  return number.toString().replace(regexp, ',');
+}
+
 interface RoomItemProps {
   navigation: any;
   roomItem: RoomInterface;
@@ -58,7 +64,7 @@ const RoomItem = ({navigation, roomItem}: RoomItemProps) => {
           justifyContent: 'space-between',
         }}>
         <Text>{dateToYY_MM_DD(roomItem.recentPayment)}까지</Text>
-        <Text>{roomItem.personalPrice}원</Text>
+        <Text>{numberWithComma(roomItem.personalPrice)}원</Text>
       </View>
     </TouchableOpacity>
   );
