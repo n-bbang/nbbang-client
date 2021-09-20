@@ -21,6 +21,7 @@ const Categories = ({
       {categories.map(item => {
         return (
           <CategoryItem
+            key={item.categoryId}
             currentCategoryId={currentCategoryId}
             setCurrentCategoryId={setCurrentCategoryId}
             categoryItem={item}
