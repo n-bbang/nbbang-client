@@ -20,20 +20,20 @@ const RootStackNavigator = (props: RootStackNavigatorProps) => {
           headerShown: false,
         }}
       />
-      {/* <Stack.Screen
+      <Stack.Screen
         name="MainStackNavigator"
         component={MainStackNavigator}
         options={{
           headerShown: false,
         }}
-      /> */}
-      <Stack.Screen 
+      />
+      {/* <Stack.Screen 
         name="MainDrawerNavigation"
         component={MainDrawerNavigator}
         options={{
           headerShown:false,
         }}
-      />
+      /> */}
       <Stack.Screen
         name="LoginStackNavigator"
         component={LoginStackNavigator}

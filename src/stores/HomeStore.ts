@@ -1,8 +1,9 @@
 import {makeAutoObservable} from 'mobx';
-import { CategoryInterface } from '../types';
+import { CategoryInterface, RoomInterface } from '../types';
 
 export default class HomeStore{
     categories:CategoryInterface[]=[];
+    rooms:RoomInterface[]=[];
 
     constructor(){
         makeAutoObservable(this);
@@ -10,5 +11,9 @@ export default class HomeStore{
 
     setCategories(param:CategoryInterface[]){
         this.categories=param;
+    }
+
+    setRooms(param:RoomInterface[]){
+        this.rooms=param;
     }
 }

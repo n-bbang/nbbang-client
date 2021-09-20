@@ -3,6 +3,7 @@ import * as React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import HomeContainer from '../container/HomeContainer';
 import ProfileContainer from '../container/ProfileContainer';
+import Room from '../screen/Home/Room';
 import MainDrawerNavigator from './MainDrawerNavigator';
 
 interface MainStackNavigatorProps {}
@@ -29,7 +30,13 @@ const MainStackNavigator = (props: MainStackNavigatorProps) => {
       <Stack.Screen
         name="MainDrawerNavigator"
         component={MainDrawerNavigator}
-        
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen 
+        name="Room"
+        component={Room}
       />
     </Stack.Navigator>
   );
