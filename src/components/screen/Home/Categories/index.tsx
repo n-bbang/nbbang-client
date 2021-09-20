@@ -6,8 +6,8 @@ import CategoryItem from './CategoryItem';
 
 interface CategoriesProps {
   categories: CategoryInterface[];
-  currentCategoryId: number;
-  setCurrentCategoryId: (param: number) => void;
+  currentCategoryId?: number;
+  setCurrentCategoryId?: (param: number) => void;
 }
 
 const Categories = ({
