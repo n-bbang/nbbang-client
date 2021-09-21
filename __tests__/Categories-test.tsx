@@ -21,7 +21,5 @@ describe('Categories', () => {
   it('render test', () => {
       const rendered=render(<TestCategories />);
       expect(rendered).toMatchSnapshot();
-
-      expect(rendered.getAllByText('이름').length).toBe(5);
   });
 });
