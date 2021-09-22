@@ -4,6 +4,7 @@ import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {getDummyUser} from '../../shared/functions/makeDummyData';
 import HomeStore from '../../stores/HomeStore';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 interface DrawerMenuProps {
   goToHome: () => void;
@@ -23,15 +24,28 @@ const DrawerMenu = observer(({goToHome, goToProfile}: DrawerMenuProps) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View>
-        <Text>{homeStore.user?.name}</Text>
+      <View style={styles.myInfoContainer}>
+        <Text style={styles.nameText}>{homeStore.user?.name}</Text>
+        <Text>{homeStore.user?.loginId}</Text>
       </View>
       <View style={styles.contentContainer}>
         <View>
-          <TouchableOpacity onPress={goToHome}>
+          <TouchableOpacity style={styles.drawerButton} onPress={goToHome}>
+            <Icon
+              style={styles.drawerIcon}
+              name="home"
+              size={24}
+              color="black"
+            />
             <Text>Home</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={goToProfile}>
+          <TouchableOpacity style={styles.drawerButton} onPress={goToProfile}>
+            <Icon
+              style={styles.drawerIcon}
+              name="user"
+              size={24}
+              color="black"
+            />
             <Text>Profile</Text>
           </TouchableOpacity>
         </View>
@@ -48,6 +62,26 @@ export default DrawerMenu;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+
+    paddingHorizontal: 8,
+    paddingVertical: 24,
+  },
+  myInfoContainer: {
+    paddingBottom: 24,
+  },
+  nameText: {
+    fontSize: 24,
+  },
+
+  drawerButton: {
+    flexDirection: 'row',
+    // width: '100%',
+    // justifyContent: 'center',
+    alignItems:'center',
+    marginBottom:16,
+  },
+  drawerIcon: {
+    marginRight: 16,
   },
   contentContainer: {
     flex: 1,
