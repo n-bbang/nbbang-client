@@ -5,6 +5,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {getDummyUser} from '../../shared/functions/makeDummyData';
 import HomeStore from '../../stores/HomeStore';
 import Icon from 'react-native-vector-icons/AntDesign';
+import {useRoute} from '@react-navigation/core';
 
 interface DrawerMenuProps {
   goToHome: () => void;
@@ -16,7 +17,10 @@ const HomeContext = createContext<HomeStore>(new HomeStore());
 const DrawerMenu = observer(({goToHome, goToProfile}: DrawerMenuProps) => {
   const homeStore = useContext(HomeContext);
 
-  console.log('homeStore.user, ', homeStore.user);
+  //   console.log('homeStore.user, ', homeStore.user);
+
+  const route = useRoute();
+  console.log('route in DrawerMenu, ', route);
 
   useEffect(() => {
     homeStore.setUser(getDummyUser());
@@ -77,8 +81,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     // width: '100%',
     // justifyContent: 'center',
-    alignItems:'center',
-    marginBottom:16,
+    alignItems: 'center',
+    marginBottom: 16,
   },
   drawerIcon: {
     marginRight: 16,
