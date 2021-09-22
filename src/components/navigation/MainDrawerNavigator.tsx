@@ -10,6 +10,7 @@ import HomeContainer from '../container/HomeContainer';
 import ProfileContainer from '../container/ProfileContainer';
 import DrawerMenu from './DrawerMenu';
 import Icon from 'react-native-vector-icons/AntDesign';
+import DrawerMenuUser from './DrawerMenuUser';
 
 interface MainDrawerNavigatorProps {
   navigation: any;
@@ -47,8 +48,9 @@ const MainDrawerNavigator = ({navigation}: MainDrawerNavigatorProps) => {
       // }}
       drawerContent={() => {
         return (
-          <DrawerContentScrollView contentContainerStyle={styles.container}>
+          <DrawerContentScrollView style={styles.container}>
             {/* <DrawerMenu goToHome={goToHome} goToProfile={goToProfile} /> */}
+            <DrawerMenuUser />
             <DrawerItem
               icon={() => <Icon name="home" size={24} color="black" />}
               label="홈"
@@ -79,6 +81,9 @@ export default MainDrawerNavigator;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+
+    // paddingHorizontal: 8,
+    paddingVertical: 24,
   },
 
   drawerTextFocused: {

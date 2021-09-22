@@ -28,10 +28,7 @@ const DrawerMenu = observer(({goToHome, goToProfile}: DrawerMenuProps) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.myInfoContainer}>
-        <Text style={styles.nameText}>{homeStore.user?.name}</Text>
-        <Text>{homeStore.user?.loginId}</Text>
-      </View>
+      
       <View style={styles.contentContainer}>
         <View>
           <TouchableOpacity style={styles.drawerButton} onPress={goToHome}>
@@ -69,12 +66,6 @@ const styles = StyleSheet.create({
 
     paddingHorizontal: 8,
     paddingVertical: 24,
-  },
-  myInfoContainer: {
-    paddingBottom: 24,
-  },
-  nameText: {
-    fontSize: 24,
   },
 
   drawerButton: {
