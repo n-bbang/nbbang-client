@@ -39,15 +39,8 @@ const MainDrawerNavigator = ({navigation}: MainDrawerNavigatorProps) => {
       // }}
       drawerContent={() => {
         return (
-          <DrawerContentScrollView
-            contentContainerStyle={{
-              flex:1,
-              justifyContent: 'space-between',
-            }}>
-            <DrawerMenu 
-              goToHome={goToHome}
-              goToProfile={goToProfile}
-            />
+          <DrawerContentScrollView contentContainerStyle={styles.container}>
+            <DrawerMenu goToHome={goToHome} goToProfile={goToProfile} />
           </DrawerContentScrollView>
         );
       }}>
@@ -60,5 +53,7 @@ const MainDrawerNavigator = ({navigation}: MainDrawerNavigatorProps) => {
 export default MainDrawerNavigator;
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    flex:1,
+  },
 });
