@@ -12,23 +12,14 @@ interface DrawerMenuProps {
   goToProfile: () => void;
 }
 
-const HomeContext = createContext<HomeStore>(new HomeStore());
-
 const DrawerMenu = observer(({goToHome, goToProfile}: DrawerMenuProps) => {
-  const homeStore = useContext(HomeContext);
-
   //   console.log('homeStore.user, ', homeStore.user);
 
   const route = useRoute();
   console.log('route in DrawerMenu, ', route);
 
-  useEffect(() => {
-    homeStore.setUser(getDummyUser());
-  }, []);
-
   return (
     <SafeAreaView style={styles.container}>
-      
       <View style={styles.contentContainer}>
         <View>
           <TouchableOpacity style={styles.drawerButton} onPress={goToHome}>

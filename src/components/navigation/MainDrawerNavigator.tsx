@@ -4,7 +4,7 @@ import {
   DrawerItem,
 } from '@react-navigation/drawer';
 import React, {useState} from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import HomeStore from '../../stores/HomeStore';
 import HomeContainer from '../container/HomeContainer';
 import ProfileContainer from '../container/ProfileContainer';
@@ -48,25 +48,33 @@ const MainDrawerNavigator = ({navigation}: MainDrawerNavigatorProps) => {
       // }}
       drawerContent={() => {
         return (
-          <DrawerContentScrollView style={styles.container}>
+          <DrawerContentScrollView
+            style={styles.container}
+            contentContainerStyle={styles.contentsContainer}>
             {/* <DrawerMenu goToHome={goToHome} goToProfile={goToProfile} /> */}
-            <DrawerMenuUser />
-            <DrawerItem
-              icon={() => <Icon name="home" size={24} color="black" />}
-              label="홈"
-              onPress={goToHome}
-              // activeBackgroundColor="blue"
-              // inactiveBackgroundColor="white"
-              focused={currentPage === 'Home'}
-            />
-            <DrawerItem
-              icon={() => <Icon name="user" size={24} color="black" />}
-              label="내 정보"
-              onPress={goToProfile}
-              // activeBackgroundColor="blue"
-              // inactiveBackgroundColor="white"
-              focused={currentPage === 'Profile'}
-            />
+            <View style={styles.contentsContainer}>
+              <DrawerMenuUser />
+              <DrawerItem
+                icon={() => <Icon name="home" size={24} color="black" />}
+                label="홈"
+                onPress={goToHome}
+                // activeBackgroundColor="blue"
+                // inactiveBackgroundColor="white"
+                focused={currentPage === 'Home'}
+              />
+              <DrawerItem
+                icon={() => <Icon name="user" size={24} color="black" />}
+                label="내 정보"
+                onPress={goToProfile}
+                // activeBackgroundColor="blue"
+                // inactiveBackgroundColor="white"
+                focused={currentPage === 'Profile'}
+              />
+            </View>
+
+            <TouchableOpacity style={{alignSelf: 'center'}}>
+              <Text>로그아웃</Text>
+            </TouchableOpacity>
           </DrawerContentScrollView>
         );
       }}>
@@ -86,11 +94,9 @@ const styles = StyleSheet.create({
     paddingVertical: 24,
   },
 
-  drawerTextFocused: {
-    // fontSize
-    color: 'blue',
-  },
-  drawerText: {
-    color: 'black',
+  contentsContainer: {
+    flex: 1,
+
+    // backgroundColor: 'red',
   },
 });
