@@ -3,7 +3,7 @@ import {
   DrawerContentScrollView,
   DrawerItem,
 } from '@react-navigation/drawer';
-import * as React from 'react';
+import React, {useState} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import HomeStore from '../../stores/HomeStore';
 import HomeContainer from '../container/HomeContainer';
@@ -18,13 +18,16 @@ interface MainDrawerNavigatorProps {
 const Drawer = createDrawerNavigator();
 
 const MainDrawerNavigator = ({navigation}: MainDrawerNavigatorProps) => {
+  const [currentPage, setCurrentPage] = useState<string>('Home');
 
   const goToHome = () => {
     navigation.navigate('HomeContainer');
+    setCurrentPage('Home');
   };
 
   const goToProfile = () => {
     navigation.navigate('ProfileContainer');
+    setCurrentPage('Profile');
   };
 
   console.log('route name in MainDrawerNavigator, ', navigation.state);
@@ -48,11 +51,11 @@ const MainDrawerNavigator = ({navigation}: MainDrawerNavigatorProps) => {
             {/* <DrawerMenu goToHome={goToHome} goToProfile={goToProfile} /> */}
             <DrawerItem
               icon={() => <Icon name="home" size={24} color="black" />}
-              label={({focused, color}) => <Text>홈</Text>}
+              label="홈"
               onPress={goToHome}
               // activeBackgroundColor="blue"
               // inactiveBackgroundColor="white"
-              focused
+              focused={currentPage === 'Home'}
             />
             <DrawerItem
               icon={() => <Icon name="user" size={24} color="black" />}
@@ -60,6 +63,7 @@ const MainDrawerNavigator = ({navigation}: MainDrawerNavigatorProps) => {
               onPress={goToProfile}
               // activeBackgroundColor="blue"
               // inactiveBackgroundColor="white"
+              focused={currentPage === 'Profile'}
             />
           </DrawerContentScrollView>
         );
