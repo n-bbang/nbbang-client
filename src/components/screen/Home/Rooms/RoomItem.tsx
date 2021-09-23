@@ -12,7 +12,7 @@ import {numberWithComma} from '../../../../shared/functions/number';
 import {dateToYYMMDD} from '../../../../shared/functions/date';
 const WINDOW_WIDTH = Dimensions.get('window').width;
 interface RoomItemProps {
-  navigation: any;
+  navigation?: any;
   roomItem: RoomInterface;
 }
 
