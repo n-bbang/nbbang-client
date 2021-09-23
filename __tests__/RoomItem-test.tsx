@@ -27,6 +27,7 @@ describe('RoomItem', () => {
         expect(rendered.getByText(`${dateToYYMMDD({date:roomItemObject.recentPayment, separator:'.'})}까지`));
         expect(rendered.getByText(`${numberWithComma(roomItemObject.personalPrice)}`));
     
+        expect(rendered.getAllByTestId('icon-test').length).toBe(roomItemObject.maxUser)        
         // expect(rendered.getAllBy)
     });
 });

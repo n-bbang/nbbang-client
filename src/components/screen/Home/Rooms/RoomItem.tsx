@@ -27,6 +27,7 @@ const RoomItem = ({navigation, roomItem}: RoomItemProps) => {
         {Array.from({length: roomItem.maxUser}, (value, index) => {
           return (
             <Icon
+              testID='icon-test'
               key={index}
               style={styles.icon}
               name="smile-circle"
