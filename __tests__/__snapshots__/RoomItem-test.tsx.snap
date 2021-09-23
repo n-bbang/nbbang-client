@@ -115,6 +115,28 @@ exports[`RoomItem rendering test 1`] = `
     >
       
     </Text>
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "black",
+            "fontSize": 20,
+          },
+          Object {
+            "marginRight": 10,
+          },
+          Object {
+            "fontFamily": "anticon",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
   </View>
   <View
     style={

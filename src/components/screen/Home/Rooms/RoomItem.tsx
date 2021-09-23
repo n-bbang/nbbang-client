@@ -24,7 +24,7 @@ const RoomItem = ({navigation, roomItem}: RoomItemProps) => {
       <Text style={styles.roomName}>{roomItem.roomName}</Text>
       <Text style={styles.platformName}>{roomItem.platformId}</Text>
       <View style={styles.iconsContainer}>
-        {Array.from({length: 3}, (value, index) => {
+        {Array.from({length: roomItem.maxUser}, (value, index) => {
           return (
             <Icon
               key={index}
