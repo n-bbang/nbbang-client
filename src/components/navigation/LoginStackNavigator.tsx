@@ -5,6 +5,7 @@ import HomeContainer from '../container/HomeContainer';
 import LoginContainer from '../container/LoginContainer';
 import ProfileContainer from '../container/ProfileContainer';
 import Auth from '../screen/Login/Auth/Auth';
+import FindPage from '../screen/Login/Find/FindPage';
 
 interface LoginStackNavigatorProps {}
 
@@ -24,6 +25,14 @@ const LoginStackNavigator = (props: LoginStackNavigatorProps) => {
       <Stack.Screen
         name="Auth"
         component={Auth}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Stack.Screen
+        name="Find"
+        component={FindPage}
         options={{
           headerShown: false,
         }}

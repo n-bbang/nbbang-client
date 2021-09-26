@@ -33,7 +33,11 @@ const LoginInput = ({ navigation }: LoginProps) => {
           <Icon name={auto ? "downcircle" : "downcircleo"} size={15} />
           <Text>로그인 상태 유지</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={()=> {
+            navigation.navigate("Find");
+          }}
+        >
           <Text>아이디 / 비밀번호 찾기</Text>
         </TouchableOpacity>
       </View>

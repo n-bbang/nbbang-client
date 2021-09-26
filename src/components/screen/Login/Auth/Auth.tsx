@@ -5,6 +5,7 @@ import { DrawerActions } from '@react-navigation/routers';
 import Concent from './Concent';
 import InputInfo from './InputInfo';
 import Result from './Result';
+import Header from '../Header';
 
 
 interface AuthProps {
@@ -26,24 +27,6 @@ const Auth = ({ navigation }: AuthProps) => {
   )
 
 
-    const Header = () => {
-        return (
-            <View style={{height:30}}>
-             <TouchableOpacity
-                style={{position:'absolute',justifyContent:'center',paddingHorizontal:10,}}
-                onPress={()=>navigation.goBack()}
-                >
-                    <Icon name={"left"} size={20} />
-                </TouchableOpacity>
-            <View style={styles.header}>
-                <Text>
-                    회원가입
-                </Text>
-            </View>
-            </View>
-        )
-    }
-
     const movePage = (page : number) => {
         if(page >= 3) navigation.navigate('MainStackNavigator');
         else setPage(page);
@@ -61,7 +44,7 @@ const Auth = ({ navigation }: AuthProps) => {
 
   return (
     <SafeAreaView style={{}}>
-        <Header/>
+        <Header navigation={navigation} num={1}/>
         {
             ChangePage(page)
         }
