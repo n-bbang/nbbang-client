@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RoomItem rendering test 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "borderColor": "gray",
+      "borderRadius": 4,
+      "borderWidth": 1,
+      "opacity": 1,
+      "padding": 16,
+      "width": 343,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    roomName
+  </Text>
+  <Text
+    style={
+      Object {
+        "fontSize": 12,
+        "marginBottom": 16,
+      }
+    }
+  >
+    1
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 8,
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "black",
+            "fontSize": 20,
+          },
+          Object {
+            "marginRight": 10,
+          },
+          Object {
+            "fontFamily": "anticon",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+      testID="icon-test"
+    >
+      
+    </Text>
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "black",
+            "fontSize": 20,
+          },
+          Object {
+            "marginRight": 10,
+          },
+          Object {
+            "fontFamily": "anticon",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+      testID="icon-test"
+    >
+      
+    </Text>
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "black",
+            "fontSize": 20,
+          },
+          Object {
+            "marginRight": 10,
+          },
+          Object {
+            "fontFamily": "anticon",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+      testID="icon-test"
+    >
+      
+    </Text>
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "black",
+            "fontSize": 20,
+          },
+          Object {
+            "marginRight": 10,
+          },
+          Object {
+            "fontFamily": "anticon",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+      testID="icon-test"
+    >
+      
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 12,
+        }
+      }
+    >
+      21.09.01
+      까지
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 12,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 14,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        2,500
+      </Text>
+      원
+    </Text>
+  </View>
+</View>
+`;
