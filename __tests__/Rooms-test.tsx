@@ -6,10 +6,11 @@ import {getDummyRooms} from '../src/shared/functions/makeDummyData';
 
 describe('Rooms', () => {
   it('rendering test', () => {
-    const rendered = render(
-      <Rooms rooms={getDummyRooms(5)} />,
-    );
+    const rendered = render(<Rooms rooms={getDummyRooms(5)} />);
 
     expect(rendered).toMatchSnapshot();
+
+    expect(rendered.getAllByText('roomName').length).toBe(5);
+    
   });
 });
