@@ -1,0 +1,1081 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rooms rendering test 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "bossUserId": 0,
+          "maxUser": 4,
+          "personalPrice": 2500,
+          "platformId": 0,
+          "recentPayment": 2021-10-14T14:13:23.995Z,
+          "roomId": 0,
+          "roomName": "roomName",
+          "totalPrice": 10000,
+        },
+        Object {
+          "bossUserId": 1,
+          "maxUser": 4,
+          "personalPrice": 2500,
+          "platformId": 1,
+          "recentPayment": 2021-10-14T14:13:23.995Z,
+          "roomId": 1,
+          "roomName": "roomName",
+          "totalPrice": 10000,
+        },
+        Object {
+          "bossUserId": 2,
+          "maxUser": 4,
+          "personalPrice": 2500,
+          "platformId": 2,
+          "recentPayment": 2021-10-14T14:13:23.995Z,
+          "roomId": 2,
+          "roomName": "roomName",
+          "totalPrice": 10000,
+        },
+        Object {
+          "bossUserId": 3,
+          "maxUser": 4,
+          "personalPrice": 2500,
+          "platformId": 3,
+          "recentPayment": 2021-10-14T14:13:23.995Z,
+          "roomId": 3,
+          "roomName": "roomName",
+          "totalPrice": 10000,
+        },
+        Object {
+          "bossUserId": 4,
+          "maxUser": 4,
+          "personalPrice": 2500,
+          "platformId": 4,
+          "recentPayment": 2021-10-14T14:13:23.995Z,
+          "roomId": 4,
+          "roomName": "roomName",
+          "totalPrice": 10000,
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "marginRight": 16,
+                "marginTop": 32,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "borderColor": "gray",
+                  "borderRadius": 4,
+                  "borderWidth": 1,
+                  "opacity": 1,
+                  "padding": 16,
+                  "width": 343,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "fontSize": 16,
+                  }
+                }
+              >
+                roomName
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "fontSize": 12,
+                    "marginBottom": 16,
+                  }
+                }
+              >
+                0
+              </Text>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "marginBottom": 8,
+                  }
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 12,
+                    }
+                  }
+                >
+                  21.10.14
+                  까지
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 12,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "fontSize": 14,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    2,500
+                  </Text>
+                  원
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginRight": 0,
+                "marginTop": 32,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "borderColor": "gray",
+                  "borderRadius": 4,
+                  "borderWidth": 1,
+                  "opacity": 1,
+                  "padding": 16,
+                  "width": 343,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "fontSize": 16,
+                  }
+                }
+              >
+                roomName
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "fontSize": 12,
+                    "marginBottom": 16,
+                  }
+                }
+              >
+                1
+              </Text>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "marginBottom": 8,
+                  }
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 12,
+                    }
+                  }
+                >
+                  21.10.14
+                  까지
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 12,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "fontSize": 14,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    2,500
+                  </Text>
+                  원
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "marginRight": 16,
+                "marginTop": 32,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "borderColor": "gray",
+                  "borderRadius": 4,
+                  "borderWidth": 1,
+                  "opacity": 1,
+                  "padding": 16,
+                  "width": 343,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "fontSize": 16,
+                  }
+                }
+              >
+                roomName
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "fontSize": 12,
+                    "marginBottom": 16,
+                  }
+                }
+              >
+                2
+              </Text>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "marginBottom": 8,
+                  }
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 12,
+                    }
+                  }
+                >
+                  21.10.14
+                  까지
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 12,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "fontSize": 14,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    2,500
+                  </Text>
+                  원
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginRight": 0,
+                "marginTop": 32,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "borderColor": "gray",
+                  "borderRadius": 4,
+                  "borderWidth": 1,
+                  "opacity": 1,
+                  "padding": 16,
+                  "width": 343,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "fontSize": 16,
+                  }
+                }
+              >
+                roomName
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "fontSize": 12,
+                    "marginBottom": 16,
+                  }
+                }
+              >
+                3
+              </Text>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "marginBottom": 8,
+                  }
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 12,
+                    }
+                  }
+                >
+                  21.10.14
+                  까지
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 12,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "fontSize": 14,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    2,500
+                  </Text>
+                  원
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "marginRight": 16,
+                "marginTop": 32,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "borderColor": "gray",
+                  "borderRadius": 4,
+                  "borderWidth": 1,
+                  "opacity": 1,
+                  "padding": 16,
+                  "width": 343,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "fontSize": 16,
+                  }
+                }
+              >
+                roomName
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "fontSize": 12,
+                    "marginBottom": 16,
+                  }
+                }
+              >
+                4
+              </Text>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "marginBottom": 8,
+                  }
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "black",
+                        "fontSize": 20,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "anticon",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                  testID="icon-test"
+                >
+                  
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 12,
+                    }
+                  }
+                >
+                  21.10.14
+                  까지
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 12,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "fontSize": 14,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    2,500
+                  </Text>
+                  원
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

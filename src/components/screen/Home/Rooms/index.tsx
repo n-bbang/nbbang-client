@@ -4,7 +4,7 @@ import {RoomInterface} from '../../../../types';
 import RoomItem from './RoomItem';
 
 interface RoomsProps {
-  navigation: any;
+  navigation?: any;
   rooms: RoomInterface[];
 }
 
