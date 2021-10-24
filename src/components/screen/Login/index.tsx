@@ -1,15 +1,13 @@
 import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 import LoginInput from './LoginInput';
 
-interface LoginProps {
-  navigation:any;
-}
+interface LoginProps {}
 
-const Login = ( {navigation} : LoginProps) => {
+const Login = ({}: LoginProps) => {
   return (
     <View style={styles.container}>
-      <LoginInput navigation={navigation}/>
+      <LoginInput />
     </View>
   );
 };
@@ -17,5 +15,5 @@ const Login = ( {navigation} : LoginProps) => {
 export default Login;
 
 const styles = StyleSheet.create({
-  container: {}
+  container: {},
 });
